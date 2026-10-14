@@ -1,0 +1,16 @@
+{
+  "expo": {
+    "name": "Healthify",
+    "slug": "healthify",
+    "version": "1.0.0",
+    "orientation": "default",
+    "userInterfaceStyle": "light",
+    "web": {
+      "bundler": "metro",
+      "output": "single",
+      "name": "Healthify — Healthy Meals, Happier Lives",
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": ["expo-font"]
+  }
+}
