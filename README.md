@@ -85,7 +85,7 @@ npm run test:ui
 The browser suite uses locally installed Google Chrome. To use Edge, set BROWSER_CHANNEL=msedge before running it. Set QA_URL to test another preview/deployment. The suite checks 1440, 1024, 768, 390, and 320px viewports, overflow, images, loaded fonts, forms, navigation, FAQ controls, focus handling, and browser errors. It writes screenshots and reports to ignored tmp/qa/.
 
 
-**Live URL: not deployed.** No Vercel account/project connection was available in this workspace. A local production export is not a live deployment.
+**Live URL: https://healthify-uiux.vercel.app**
 
 ## Demo scope and limitations
 
