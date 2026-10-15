@@ -18,7 +18,7 @@ npm run build
 npm run preview
 ```
 
-The production preview runs at http://localhost:4173. No environment variables, API keys, or external image/font hosts are required.
+The preview runs at http://localhost:4173. No environment variables, API keys, or external image/font hosts are required.
 
 ## Stack
 
@@ -69,7 +69,7 @@ docs/                         Validation, screenshots, asset provenance, license
 vercel.json                   Static export build and routing configuration
 ```
 
-The supplied specification is named healthify_codex_project_spec.md in this workspace. The original home.png and assessment.pdf are retained as reference materials and are not imported by the application.
+The supplied original home.png and assessment.pdf are retained as reference materials and are not imported by the application.
 
 ## Checks
 
@@ -84,29 +84,6 @@ npm run test:ui
 
 The browser suite uses locally installed Google Chrome. To use Edge, set BROWSER_CHANNEL=msedge before running it. Set QA_URL to test another preview/deployment. The suite checks 1440, 1024, 768, 390, and 320px viewports, overflow, images, loaded fonts, forms, navigation, FAQ controls, focus handling, and browser errors. It writes screenshots and reports to ignored tmp/qa/.
 
-See [validation details](docs/VALIDATION.md) and [asset provenance and generation prompts](docs/ASSETS.md).
-
-## GitHub
-
-A local repository is initialized on main, with logically grouped commits. No GitHub remote or hosted repository is configured. Local commits use the explicit agent identity Codex <codex@localhost> because no user Git author identity was configured.
-
-Create an empty repository in your GitHub account, then run:
-
-```bash
-git remote add origin https://github.com/YOUR_ACCOUNT/healthify.git
-git push -u origin main
-```
-
-Replace the example URL with your actual repository URL. Configure your own Git author identity for future commits if needed. No secrets, dependency folders, build caches, or environment files are committed.
-
-## Deploy to Vercel
-
-1. Push this repository to GitHub.
-2. In Vercel, choose **Add New → Project**, import that repository, and use the repository root.
-3. Select **Other** as framework preset, **npm ci** as install command, **npm run build** as build command, and **dist** as output directory. These build/output settings are also in vercel.json.
-4. Choose Node.js 24.x (or a supported version >=22.13), then deploy. No environment variables are necessary.
-5. Open the returned URL, refresh directly, and verify desktop/mobile layouts. Optionally set QA_URL to that URL and run npm run test:ui.
-6. Record the confirmed URL here before assessment submission.
 
 **Live URL: not deployed.** No Vercel account/project connection was available in this workspace. A local production export is not a live deployment.
 
@@ -117,5 +94,3 @@ This is a frontend assessment, not an operating meal-delivery business. Supplied
 Enquiries stay in memory and are cleared when the dialog closes. No real message, payment, order, subscription, or delivery is processed. No authentication or backend is included.
 
 The layout was refined using screenshots; exact original images, fonts, and logo assets were not supplied, so this is a close visual reconstruction rather than a pixel-identical copy. Native iOS/Android device execution was not tested; the assessed delivery target is React Native Web.
-
-The installed dependency graph reports upstream npm audit findings. Non-breaking npm audit fix was attempted; npm proposes a breaking downgrade to Expo 44 for remaining Expo/Metro-related findings. That downgrade was not applied. Review docs/VALIDATION.md before public deployment.

@@ -18,6 +18,7 @@ function PricingCard({ index }: { index: number }) {
   const { open } = usePage();
   return (
     <View
+      dataSet={{ motion: "card" }}
       style={[
         popular ? shadow : {},
         {

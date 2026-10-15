@@ -37,6 +37,7 @@ export default function Footer() {
             {(["facebook", "x", "instagram", "youtube"] as const).map((s) => (
               <View
                 key={s}
+                dataSet={{ motion: "social" }}
                 accessibilityLabel={s + " social icon — no profile configured"}
                 style={{
                   width: 31,

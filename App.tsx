@@ -11,6 +11,7 @@ import { DMSans_400Regular } from "@expo-google-fonts/dm-sans/400Regular";
 import { DMSans_500Medium } from "@expo-google-fonts/dm-sans/500Medium";
 import { DMSans_700Bold } from "@expo-google-fonts/dm-sans/700Bold";
 import { Lora_500Medium } from "@expo-google-fonts/lora/500Medium";
+import { Lora_600SemiBold } from "@expo-google-fonts/lora/600SemiBold";
 import { Lora_700Bold } from "@expo-google-fonts/lora/700Bold";
 import Header from "./src/components/Header";
 import HeroSection from "./src/sections/HeroSection";
@@ -49,6 +50,7 @@ export default function App() {
     DMSansMedium: DMSans_500Medium,
     DMSansBold: DMSans_700Bold,
     Lora: Lora_500Medium,
+    LoraSemiBold: Lora_600SemiBold,
     LoraBold: Lora_700Bold,
   });
   const [panel, setPanel] = useState<Panel>(null);
@@ -133,7 +135,7 @@ export default function App() {
           boxShadow: "0 2px 8px rgba(0,0,0,0.15)",
         })}
       >
-        <Icon name="chat" size={31} color="white" />
+        <Icon name="whatsapp" size={31} color="white" />
       </Pressable>
       <EnquiryModal
         panel={panel}

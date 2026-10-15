@@ -15,6 +15,7 @@ export const fonts = {
   medium: "DMSansMedium",
   bold: "DMSansBold",
   heading: "Lora",
+  headingSemiBold: "LoraSemiBold",
   headingBold: "LoraBold",
 };
 export const tw = create({

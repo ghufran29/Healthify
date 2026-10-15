@@ -15,6 +15,7 @@ function ServiceCard({ index }: { index: number }) {
   const item = services[index];
   return (
     <View
+      dataSet={{ motion: "card" }}
       style={{
         flex: 1,
         backgroundColor: "white",

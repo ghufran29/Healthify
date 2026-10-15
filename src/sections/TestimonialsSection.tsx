@@ -28,6 +28,7 @@ export default function TestimonialsSection() {
         {testimonials.map((t) => (
           <View
             key={t.name}
+            dataSet={{ motion: "card" }}
             style={{
               flex: 1,
               borderWidth: 1,

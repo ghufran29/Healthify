@@ -10,7 +10,8 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
     "preview": "serve dist -l 4173",
-    "test:ui": "node scripts/qa.mjs"
+    "test:ui": "node scripts/qa.mjs",
+    "test:scroll": "node scripts/scroll-qa.mjs"
   },
   "dependencies": {
     "@expo-google-fonts/dm-sans": "^0.4.2",

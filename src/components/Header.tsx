@@ -13,7 +13,10 @@ export default function Header() {
     navigate(id);
   };
   return (
-    <View style={{ backgroundColor: "white", zIndex: 5 }}>
+    <View
+      nativeID="site-header"
+      style={{ backgroundColor: "white", zIndex: 5 }}
+    >
       <Container
         style={[
           tw.style("flex-row items-center justify-between"),
@@ -22,7 +25,10 @@ export default function Header() {
       >
         <Logo onPress={() => go("home")} />
         {!compact && (
-          <View style={[tw.style("flex-row items-center"), { gap: 24 }]}>
+          <View
+            dataSet={{ navigation: "links" }}
+            style={[tw.style("flex-row items-center"), { gap: 24 }]}
+          >
             {navigation.map(([label, id]) => (
               <Link
                 key={id}
@@ -66,6 +72,7 @@ export default function Header() {
             <Pressable
               accessibilityRole="button"
               key={id}
+              dataSet={{ navigation: "link" }}
               onPress={() => go(id)}
               style={({ pressed }) => ({
                 padding: 12,

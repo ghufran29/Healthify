@@ -42,6 +42,7 @@ export default function ProcessSection() {
           {steps.map((s, i) => (
             <View
               key={s.title}
+              dataSet={{ motion: "card" }}
               style={[tw.style("flex-row items-center"), { flex: 1, gap: 22 }]}
             >
               <View

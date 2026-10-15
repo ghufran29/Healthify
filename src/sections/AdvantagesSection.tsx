@@ -50,6 +50,7 @@ export default function AdvantagesSection() {
           {advantages.map((x) => (
             <View
               key={x.title}
+              dataSet={{ motion: "card" }}
               style={{
                 width: mobile ? "47%" : undefined,
                 flex: mobile ? undefined : 1,
