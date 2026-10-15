@@ -125,8 +125,11 @@ export default function HeroSection() {
         style={{
           position: "absolute",
           top: tablet ? undefined : 54,
-          bottom: tablet ? 210 : undefined,
+          bottom: tablet ? (mobile ? 175 : 285) : undefined,
           left: tablet ? 20 : "49%",
+          backgroundColor: tablet ? "rgba(252,251,248,0.94)" : "transparent",
+          padding: tablet ? 10 : 0,
+          borderRadius: tablet ? 12 : 0,
           transform: [{ rotate: "-10deg" }],
         }}
       >

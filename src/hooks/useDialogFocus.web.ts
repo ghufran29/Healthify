@@ -1,7 +1,9 @@
 import { useEffect, useRef } from "react";
 export function useDialogFocus(active: boolean, onClose: () => void) {
   const close = useRef(onClose);
-  close.current = onClose;
+  useEffect(() => {
+    close.current = onClose;
+  }, [onClose]);
   useEffect(() => {
     if (!active) return;
     const previous = document.activeElement as HTMLElement | null;

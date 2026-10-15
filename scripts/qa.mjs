@@ -228,7 +228,8 @@ await expect(
 await page
   .getByRole("button", { name: "Get started with Balanced Plan" })
   .click();
-await page.screenshot({ path: "tmp/qa/mobile-modal.png", fullPage: true });
+await page.waitForTimeout(300);
+await page.screenshot({ path: "tmp/qa/mobile-modal.png", fullPage: false });
 const dialog = page.getByTestId("dialog");
 await dialog.getByRole("button", { name: "Close dialog" }).focus();
 await page.keyboard.press("Shift+Tab");
